@@ -1,5 +1,5 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { Profile, User } = require('../models');
+const { User } = require('../models');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
@@ -40,7 +40,7 @@ const resolvers = {
             }
             throw new AuthenticationError('Must be logged in!');
         },
-        deleteBook: async (parent, {bookId}, context) => {
+        removeBook: async (parent, {bookId}, context) => {
             if (context.user) {
                 const updatedUser = await User.findByIdAndUpdate(
                     {_id: context.user._id}, {$pull: {savedBooks: {bookId}}}, {new: true}
