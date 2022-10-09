@@ -7,6 +7,7 @@ class AuthService {
   getProfile() {
     return decode(this.getToken());
   }
+  
 
   // check if user's logged in
   loggedIn() {
