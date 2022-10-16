@@ -1,1 +1,0 @@
-web: node src/02-CHALLENGE.js
