@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 mongoURI: 'mongodb+srv://slebron:password7272@cluster0.0g8zrjg.mongodb.net/?retryWrites=true&w=majority'
 
-const uri = process.env.MONGODB_URI;
+const uri = process.env.mongoURI;
 // process.env.config_variable_name
 
 mongoose
