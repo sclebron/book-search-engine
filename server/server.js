@@ -6,8 +6,6 @@ const { typeDefs, resolvers } = require('./schemas');
 const db = require('./config/connection');
 const routes = require('./routes');
 
-mongodb+srv://slebron:password7272@cluster0.0g8zrjg.mongodb.net/?retryWrites=true&w=majority
-
 const app = express();
 const PORT = process.env.PORT || 3001;
 const server = new ApolloServer({
